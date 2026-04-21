@@ -1,0 +1,27 @@
+---
+description: Conditional bugfix discipline for reliable root-cause fixes
+globs:
+  - "**/*.{ts,tsx,js,jsx,py,md,mdx,rst}"
+alwaysApply: false
+---
+
+# Bugfix Flow (Conditional)
+
+## When
+- The task is a bug, regression, flaky behavior, or production issue.
+- The request contains terms like `bug`, `fix`, `broken`, `error`, `regression`, `debug`.
+
+## Do
+1. Reproduce the issue with explicit steps.
+2. State root-cause hypothesis before changing code.
+3. Validate fix against reproduction path.
+4. Add/update regression test when feasible.
+
+## Avoid
+- Patching symptoms without root-cause validation.
+- Declaring resolved without rerunning reproduction checks.
+
+## Done when
+- Reproduction no longer fails.
+- Root cause is explained.
+- Regression protection is added or explicitly documented as deferred.

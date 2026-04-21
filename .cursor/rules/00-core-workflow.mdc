@@ -1,0 +1,27 @@
+---
+description: Balanced core workflow for scoped implementation
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+# Core Workflow (Always On)
+
+## When
+- Any implementation, refactor, or task larger than a trivial edit.
+
+## Do
+- Start medium/large tasks with a short plan.
+- Confirm scope and acceptance criteria before coding.
+- Keep diffs focused and incremental.
+- Preserve behavior unless change is explicitly requested.
+
+## Avoid
+- Unrelated refactors during targeted work.
+- Broad rewrites without explicit agreement.
+- Silent scope expansion.
+
+## Done when
+- Scope is met.
+- Acceptance criteria are addressed.
+- Next verification step is clearly identified.

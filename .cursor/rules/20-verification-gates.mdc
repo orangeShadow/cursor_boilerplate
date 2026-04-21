@@ -1,0 +1,25 @@
+---
+description: Conditional verification gates after code changes
+globs:
+  - "**/*.{ts,tsx,js,jsx,py,md,mdx,rst}"
+alwaysApply: false
+---
+
+# Verification Gates (Conditional)
+
+## When
+- Any code behavior is changed.
+- Tests, lint, types, configs, or build scripts are modified.
+
+## Do
+- Run relevant tests for touched behavior.
+- Run lint/typecheck for touched modules when available.
+- If checks cannot run locally, provide exact follow-up commands.
+
+## Avoid
+- Declaring completion without verification evidence.
+- Running unrelated heavy checks when targeted checks are sufficient.
+
+## Done when
+- Verification commands and outcomes are recorded.
+- No unresolved blocker remains for touched scope.

@@ -1,0 +1,24 @@
+---
+description: Conditional documentation sync for workflow and architecture changes
+globs:
+  - "**/*.{md,mdx,rst,txt}"
+alwaysApply: false
+---
+
+# Docs Sync (Conditional)
+
+## When
+- Setup, architecture, public behavior, or developer workflow changes.
+- New commands/rules/processes are introduced.
+
+## Do
+- Update impacted docs in `README` and/or `docs/`.
+- Keep planning artifacts in `docs/superpowers` for larger changes.
+- Note follow-up doc debt if full update is out of scope.
+
+## Avoid
+- Leaving workflow-affecting changes undocumented.
+- Mixing unrelated documentation rewrites.
+
+## Done when
+- Required docs are updated or explicit follow-up is captured.

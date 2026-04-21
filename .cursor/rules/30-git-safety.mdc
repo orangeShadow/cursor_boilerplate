@@ -1,0 +1,24 @@
+---
+description: Conditional git safety guardrails for non-destructive collaboration
+globs:
+  - "**/*"
+alwaysApply: false
+---
+
+# Git Safety (Conditional)
+
+## When
+- Performing git operations (commit, rebase, reset, push, branch cleanup).
+- Keep this rule broad even when stack-specific globs are used elsewhere.
+
+## Do
+- Keep commits scoped to one logical goal when possible.
+- Write commit messages with intent (`why`) and impact.
+- Request explicit confirmation before destructive operations.
+
+## Avoid
+- `git reset --hard`, force pushes, or history rewrites without explicit user approval.
+- Reverting unrelated user changes.
+
+## Done when
+- Git actions are safe, scoped, and aligned with explicit user intent.
