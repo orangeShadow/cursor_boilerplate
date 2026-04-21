@@ -31,6 +31,11 @@ This matrix defines when to invoke each skill in everyday delivery.
 - Trigger: user explicitly asks to containerize after bootstrap.
 - Outcome: repeatable `docker build`/`docker run` path and updated docs.
 
+## Knowledge Base / Confluence (Optional Track)
+- `confluence-curl` - reads Confluence pages via `curl` from the user's machine using `.cursor/.env`.
+- Trigger: user asks to open wiki/spec pages in Confluence.
+- Outcome: fetched page content for analysis without hardcoded org-specific settings.
+
 ## Practical Notes
 - Keep solutions incremental; avoid broad rewrites unless requested.
 - Prefer one logical goal per iteration.
