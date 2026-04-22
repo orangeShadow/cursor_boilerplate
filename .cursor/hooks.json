@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "hooks": {
+    "subagentStop": [
+      {
+        "matcher": "verifier",
+        "command": ".cursor/hooks/on-verifier-done.sh",
+        "timeout": 10
+      },
+      {
+        "matcher": "reviewer",
+        "command": ".cursor/hooks/on-reviewer-done.sh",
+        "timeout": 10
+      }
+    ],
+    "afterFileEdit": [
+      {
+        "command": ".cursor/hooks/on-file-edit.sh",
+        "timeout": 10
+      }
+    ]
+  }
+}

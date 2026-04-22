@@ -12,9 +12,22 @@ alwaysApply: true
 
 ## Do
 - Start medium/large tasks with a short plan.
+- For tasks with 3+ steps, delegate planning to the `planner` subagent.
 - Confirm scope and acceptance criteria before coding.
 - Keep diffs focused and incremental.
 - Preserve behavior unless change is explicitly requested.
+- After implementation, run the `verifier` subagent to validate work.
+- Before PR, run the `reviewer` subagent for code review.
+
+## Subagent Quick Reference
+- `planner` — decompose multi-step tasks into executable plans
+- `implementer` — execute approved plans step by step
+- `verifier` — independently validate completed work
+- `reviewer` — code review before PR
+- `debugger` — root-cause analysis for bugs and failures
+- `explorer` — research unfamiliar code and map dependencies
+- `refactorer` — safe refactoring with test coverage
+- `docs-writer` — update documentation after changes
 
 ## Avoid
 - Unrelated refactors during targeted work.
@@ -24,4 +37,5 @@ alwaysApply: true
 ## Done when
 - Scope is met.
 - Acceptance criteria are addressed.
+- `verifier` subagent confirms implementation works.
 - Next verification step is clearly identified.
